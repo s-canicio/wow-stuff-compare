@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Comparateu de pièce</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+
+<body class="container">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="row header">
+            <div class="col-sm-3">Stats</div>
+            <div class="col-sm-3">Valeur Stat</div>
+            <div class="col-sm-3">Pièce 1</div>
+            <div class="col-sm-3">Pièce 2</div>
+        </div>
+        <div id="modifier">
+            <div class="row" v-for="stat in stats">
+                <div class="col-sm-3">
+                    {{ stat.name }}
+                </div>
+                <div class="col-sm-3">
+                    <input v-model="stat.multiplier">
+                </div>
+                <div class="col-sm-3">
+                    {{ stat.name }}
+                </div>
+                <div class="col-sm-3">
+                    {{ stat.name }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="javascripts/vue.min.js"></script>
+    <script src="javascripts/app.js"></script>
+</body>
+
+</html>
